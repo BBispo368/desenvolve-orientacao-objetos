@@ -5,6 +5,7 @@ public class Livro {
     private final Autor autor;
     private String genero;
     private boolean disponivel = true;
+    private boolean publicado = false; // novo campo para suportar publicação
 
     public Livro(String titulo, Autor autor, String genero) {
         this.titulo = titulo;
@@ -41,5 +42,14 @@ public class Livro {
 
     public void marcarComoDisponivel() {
         this.disponivel = true;
+    }
+
+    // novos getters/setters para publicação
+    public boolean isPublicado() {
+        return publicado;
+    }
+
+    public void setPublicado(boolean publicado) {
+        this.publicado = publicado;
     }
 }
